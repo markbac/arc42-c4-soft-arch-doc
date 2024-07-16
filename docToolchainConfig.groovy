@@ -405,9 +405,9 @@ openApi = [:]
 //
 
 openApi.with {
-    specFile = 'documentation/petstore-expanded.yaml' // i.e. 'petstore.yaml', 'src/doc/petstore.yaml'
-    infoUrl = 'https://my-api.company.com'
-    infoEmail = 'info@company.com'
+    specFile = 'documentation/example.yaml' // i.e. 'petstore.yaml', 'src/doc/petstore.yaml'
+    infoUrl = 'https://my-api.bacon.me.uk'
+    infoEmail = 'mark@bacon.me.uk'
 }
 //end::openApiConfig[]
 
