@@ -55,7 +55,7 @@ jobs:
           # Artifact name
           name: github-pages # optional, default is github-pages
           # Path of the directory containing the static assets.
-          path: /public
+          path: ./public
           # Duration after which artifact will expire in days.
           retention-days: 90 # optional, default is 1
   deploy:    # Add a dependency to the build job
