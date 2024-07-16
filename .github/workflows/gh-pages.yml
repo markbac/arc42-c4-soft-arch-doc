@@ -21,8 +21,14 @@ jobs:
         run: chmod +x dtcw
       - name: Migrate Markdown based ADRs from adr-tools to AsciiDoc
         run: ./dtcw exportMarkdown && cp ./build/adrs/*.adoc ./documentation/adrs/
+      - name: Export Strcuturizr images
+        run: ./dtcw exportStructurizr 
+      - name: Generate PDF
+        run: ./dtcw generatePDF  
+      - name: Generate Microsite
+        run: ./dtcw generateSite 
       - name: Generate HTML site
-        run: ./dtcw exportStructurizr generatePDF generateSite generateHTML
+        run: ./dtcw generateHTML
       - name: Copy documentation to public
         run: cp -r ./build/html5 ./public && mv ./public/internet-banking-system.html ./public/index.html 
       - name: Archive pdf artifacts
@@ -36,5 +42,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: markbac/markbac.github.io
+          publish_branch: main
           publish_dir: ./public
           destination_dir: arch
