@@ -24,7 +24,13 @@ jobs:
       - name: Generate HTML site
         run: ./dtcw exportStructurizr generatePDF generateSite generateHTML
       - name: Copy documentation to public
-        run: cp -r ./build/html5 ./public && mv ./public/internet-banking-system.html ./public/index.html
+        run: cp -r ./build/html5 ./public && mv ./public/internet-banking-system.html ./public/index.html 
+      - name: Archive pdf artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-output
+          path: build/pdf/internet-banking-system.pdf
+          retention-days: 180
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
