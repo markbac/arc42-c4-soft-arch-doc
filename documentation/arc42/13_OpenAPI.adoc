@@ -1,0 +1,5 @@
+[[section-openAPI]]
+== OpenAPI
+
+
+include::../index.adoc[]

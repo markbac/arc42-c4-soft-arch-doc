@@ -405,7 +405,7 @@ openApi = [:]
 //
 
 openApi.with {
-    specFile = 'src/docs/petstore-v2.0.yaml' // i.e. 'petstore.yaml', 'src/doc/petstore.yaml'
+    specFile = 'documentation/petstore-expanded.yaml' // i.e. 'petstore.yaml', 'src/doc/petstore.yaml'
     infoUrl = 'https://my-api.company.com'
     infoEmail = 'info@company.com'
 }

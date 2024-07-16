@@ -23,6 +23,8 @@ jobs:
         run: ./dtcw exportMarkdown && cp ./build/adrs/*.adoc ./documentation/adrs/
       - name: Export Strcuturizr images
         run: ./dtcw exportStructurizr 
+      - name: Export OpenAPI
+        run: ./dtcw exportOpenAPI && cp ./build/OpenAPI/*.adoc ./documentation/
       - name: Generate PDF
         run: ./dtcw generatePDF  
       - name: Generate Microsite
